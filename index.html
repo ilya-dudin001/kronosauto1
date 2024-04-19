@@ -1355,7 +1355,7 @@
                             изменения курса валют или от изменения стоимости услуг перевозчиков), гарантируем
                             предоставление достоверных сведений о техническом состоянии авто, страхуем риски покупателя
                             от любых непредвиденных ситуаций в процессе покупки и доставки автомобиля!</p>
-                        <p>Доверьтесь профессионалам – компании Avto  .</p>
+                        <p>Доверьтесь профессионалам – компании Кронос-Авто  .</p>
                     </div>
                 </div>
 
@@ -3279,42 +3279,28 @@
     </a>
         <h2 class="modal__title modal__title--center">Запросить расчёт</h2>
 
-        <form action="#" method="post" class="ajax-form" id="form-feedback" form-name="Рассчитать стоимость">
-            <input type="hidden" name="csrfmiddlewaretoken" value="4hyl6enEgqyk7n065mam7GmvOrxVPBAEacRm0RX1vXFMi3mht9TzONj5R0wLR0Q8">
-            <input name="f_WhatsApp" class="wa-input" type="hidden" value="">
-            <input name="f_form_name" type="hidden" value="Рассчитать стоимость">
+        <form action="mail.php" method="post" class="ajax-form" id="form-feedback" form-name="order">
+            
             <div class="form-group">
                 <input type="text" name="f_Name" placeholder="Ваше имя">
             </div>
             <div class="form-group">
                 <input class="phone" type="tel" name="f_Phone" placeholder="Телефон *" required>
             </div>
-            <div class="form-group" hidden>
-                <select class="select selected" name="f_City">
-                    <option disabled></option>
-                    
-                        <option value="1" selected>
-                            Москва
-                        </option>
-                    
-                        <option value="2" >
-                            Красноярск
-                        </option>
-                    
-                        <option value="4" >
-                            Владивосток
-                        </option>
-                    
-                </select>
-            </div>
+            
             <div class="form-group">
                 <input id="inputAutoModel" type="text" name="f_Auto" placeholder="Какой автомобиль Вас интересует?">
             </div>
+            <div class="form-group">
+                <select name="call_type" id="" class="select selected">
+                    <option value="" disabled>Как с вами связаться?</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="call">Перезвонить</option>
+                </select>
+            </div>
             <div class="feedback__footer">
-                <p class="feedback__text">Как с вами связаться?</p>
                 <div class="feedback__btns">
-                    <button class="feedback__whatsapp js-wa-button" type="submit">WhatsApp</button>
-                    <button class="feedback__callback" type="submit">Перезвонить</button>
+                    <button class="feedback__callback" type="submit">Отправить</button>
                 </div>
                 <p class="feedback__agree">Нажимая кнопку "WhatsApp" или “Перезвонить” Вы подтвеждаете своё <a
                         target="_blank" href="#">согласие на обработку персональных данных</a></p>
