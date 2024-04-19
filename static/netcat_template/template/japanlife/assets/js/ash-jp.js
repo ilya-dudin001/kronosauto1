@@ -241,34 +241,34 @@ $(document).ready(function () {
         $('form.ajax-form').append('<input type="hidden" name="ash_id" value="1" />');
     }, 3000);
 
-    $('.ajax-form').submit(function () {
-        var form = $(this),
-            fid = form.attr('id'),
-            formData = new FormData(document.getElementById(fid));
-        console.log(formData);
-        $.ajax({
-            type: "POST",
-            cache: false,
-            processData: false,
-            contentType: false,
-            url: "/callback-form/",
-            data: formData,
-            success: function (data) {
-                $('.js-modal').fadeOut();
-                if (fid === 'form-review') {
-                    $('#js-review-thanks').fadeIn();
-                }
-                if (fid === 'form-feedback') {
-                    $('#js-modal-thanks').fadeIn();
-                }
-                if (fid === 'feedback_form') {
-                    $('#js-modal-thanks').fadeIn();
-                }
-                fbq('track', 'PageView');
-            }
-        });
-        return false;
-    });
+    // $('.ajax-form').submit(function () {
+    //     var form = $(this),
+    //         fid = form.attr('id'),
+    //         formData = new FormData(document.getElementById(fid));
+    //     console.log(formData);
+    //     $.ajax({
+    //         type: "POST",
+    //         cache: false,
+    //         processData: false,
+    //         contentType: false,
+    //         url: "/callback-form/",
+    //         data: formData,
+    //         success: function (data) {
+    //             $('.js-modal').fadeOut();
+    //             if (fid === 'form-review') {
+    //                 $('#js-review-thanks').fadeIn();
+    //             }
+    //             if (fid === 'form-feedback') {
+    //                 $('#js-modal-thanks').fadeIn();
+    //             }
+    //             if (fid === 'feedback_form') {
+    //                 $('#js-modal-thanks').fadeIn();
+    //             }
+    //             fbq('track', 'PageView');
+    //         }
+    //     });
+    //     return false;
+    // });
 
 
     $(document).on('click', '.pagination_ajax a', function (e) {
